@@ -1,0 +1,41 @@
+sitemap demo label="Main Menu"
+{
+	Frame label="Zonwering" {
+		Slider item=ZonneschermWK label="Zonnescherm woonkamer" icon="rollershutter"
+		Slider item=Fake label="Fake" icon="rollershutter"
+		Switch item=ZonneschermWKForbidden
+		Text item=ZonneschermWKClosedReasons
+//		Slider item=ZonneschermSLK label="Zonnescherm slaapkamer" icon="rollershutter"
+//		Slider item=ZonneschermSTK label="Zonnescherm studeerkamer" icon="rollershutter"
+	}	
+	Frame label="Lampen" {
+		Switch item=LampSlaapkamer label="Lamp slaapkamer" icon="light"	
+//		Switch item=LampTerras label="Lamp terras" icon="terrace"
+		Slider item=LampKeuken label="Lamp keuken" icon="hue"
+	}	
+	Frame label="Weer" {
+		Text item=IndoorTemp icon="temperature"
+		Text item=IndoorHumidity icon="water"
+		Text item=PressureAbs
+		Text item=PressureRel		
+		Text item=WindAverage icon="wind"		
+		Text item=WindGust icon="wind"		
+		Text item=WindDirection	icon="wind"
+		Text item=WindyItem icon="wind"
+		Text item=RainRate icon="rain"
+		Text item=RainRecent icon="rain"
+		Text item=RainDay icon="rain"
+
+		Text item=Azimuth icon="sun"
+		Text item=Elevation icon="sun"
+
+		Text item=BRRainMax icon="rain"
+		Text item=RainyItem icon="rain"
+	}	
+	Frame label="Status" {
+		Text item=Schakelaar_Battery		
+		Text item=IndoorBattery		
+		Text item=WindBattery		
+		Text item=RainBattery		
+	}	
+}

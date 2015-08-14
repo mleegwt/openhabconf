@@ -1,0 +1,40 @@
+Switch IndoorBattery "Low battery indoor: [%s]" { wmr="id:temp.indoor.lowbatt"}
+Number IndoorTemp "Temp. indoor: [%.1f °C]"  { wmr="id:temp.indoor.temperature" }
+Number IndoorHumidity "Humidity indoor: [%.1f %%]"  { wmr="id:temp.indoor.humidity" }
+Number IndoorDewpoint "Dewpoint indoor: [%.1f °C]"  { wmr="id:temp.indoor.dewpoint" }
+
+Switch Outdoor1Battery "Low battery outdoor1: [%s]" { wmr="id:temp.indoor.lowbatt"}
+Number Outdoor1Temp "Temp. outdoor1: [%.1f °C]"  { wmr="id:temp.indoor.temperature" }
+Number Outdoor1Humidity "Humidity outdoor1: [%.1f %%]"  { wmr="id:temp.indoor.humidity" }
+Number Outdoor1Dewpoint "Dewpoint outdoor1: [%.1f °C]"  { wmr="id:temp.indoor.dewpoint" }
+
+Switch Outdoor2Battery "Low battery outdoor2: [%s]" { wmr="id:temp.indoor.lowbatt"}
+Number Outdoor2Temp "Temp. outdoor2: [%.1f °C]"  { wmr="id:temp.indoor.temperature" }
+Number Outdoor2Humidity "Humidity outdoor2: [%.1f %%]"  { wmr="id:temp.indoor.humidity" }
+Number Outdoor2Dewpoint "Dewpoint outdoor2: [%.1f °C]"  { wmr="id:temp.indoor.dewpoint" }
+
+Switch Outdoor3Battery "Low battery outdoor3: [%s]" { wmr="id:temp.indoor.lowbatt"}
+Number Outdoor3Temp "Temp. outdoor3: [%.1f °C]"  { wmr="id:temp.indoor.temperature" }
+Number Outdoor3Humidity "Humidity outdoor3: [%.1f %%]"  { wmr="id:temp.indoor.humidity" }
+Number Outdoor3Dewpoint "Dewpoint outdoor3: [%.1f °C]"  { wmr="id:temp.indoor.dewpoint" }
+Switch WindBattery "Low battery wind: [%s]" { wmr="id:wind.lowbatt"}
+Number WindGust "Wind gust: [%.1f km/h]"  { wmr="id:wind.gust" }
+Number WindAverage "Wind avg.: [%.1f km/h]"  { wmr="id:wind.average" }
+Number WindDirection "Wind direction: [%.1f °]"  { wmr="id:wind.direction" }
+Number WindChill "Wind chill: [%.1f °C]"  { wmr="id:wind.chill" }
+
+Number PressureAbs "Pressure absolute: [%d mb]"  { wmr="id:barometer.absolute" }
+Number PressureRel "Pressure relative: [%d mb]"  { wmr="id:barometer.relative" }
+Number WeatherForecast "Weather forecast: [%d]"  { wmr="id:weather.forecast" }
+Number WeatherPrevious "Weather prev. 24h: [%d]"  { wmr="id:weather.previous" }
+Switch RainBattery "Low battery rain: [%s]" { wmr="id:rain.lowbatt"}
+Number RainRate "Rain rate: [%.1f mm/hr]"  { wmr="id:rain.rate" }
+Number RainRecent "Rain recent: [%.1f mm]"  { wmr="id:rain.recent" }
+Number RainDay "Rain day: [%.1f mm]"  { wmr="id:rain.day" }
+Number RainReset "Rain since reset: [%.1f mm]"  { wmr="id:rain.reset" }
+
+Number BRRainMax "Buienradar max rain 2hr: [%.2f mm/hr]" { http="<[http://gps.buienradar.nl/getrr.php?lat=52.2883&lon=4.64703:300000:JS(maxrain.js)]" }
+
+Switch WindyItem "Generated switch 'it's windy': [%s]"
+Switch RainyItem "Generated switch 'it's rainy': [%s]"
+

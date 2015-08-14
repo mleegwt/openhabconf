@@ -1,0 +1,35 @@
+var boolean closedReasons = true
+
+rule "System startup enable closed reasons"
+when
+	System started
+then
+	postUpdate(ZonneschermWKClosedReasons, ON)
+end
+
+rule "Close rollershutter WK"
+when
+	Item ZonneschermWKClosedReasons received update ON
+then
+	sendCommand(Fake, OFF)
+end
+
+
+rule "Determine closed reasons"
+when
+	Item RainyItem received update or
+	Item WindyItem received update or
+	Item ZonneschermWKForbidden received update
+then
+	if (RainyItem.state == ON || WindyItem.state == ON || ZonneschermWKForbidden.state == ON) {
+		closedReasons = true
+	} else {
+		closedReasons = false
+	}
+
+	if (closedReasons) {
+		postUpdate(ZonneschermWKClosedReasons, ON)
+	else {
+		postUpdate(ZonneschermWKClosedReasons, OFF)
+	}
+end	

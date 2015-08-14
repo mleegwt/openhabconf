@@ -1,0 +1,30 @@
+var boolean windy = true
+
+rule "It's windy or the sensor is not operating"
+when
+	Item WindGust received update or
+then
+	if (WindGust.state > 10) {
+		windy = true
+	} else if (WindAverage.state > 10) {
+		windy = true
+	} else if (WindBattery.state == null || WindBattery.state == ON) {
+		windy = true
+	} else {
+		windy = false
+	}
+
+	if (windy) {
+		postUpdate(WindyItem, ON)
+	} else {
+		postUpdate(WindyItem, OFF)
+	}
+end
+		
+rule "Windy at system startup"
+when
+	System started
+then
+	postUpdate(WindyItem, ON)
+	logInfo("windy", "Treating the wheather situation as windy due to system startup")
+end

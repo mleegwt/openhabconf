@@ -1,0 +1,20 @@
+var boolean rainy = true
+
+rule "Rainy or rain expected"
+when
+	Item RainRate received update or 
+	Item BRRainMax received update
+then
+	if (RainRate.state > 0 || BRRainMax.state > 0 || RainBattery.state == null || RainBattery.state == ON) {
+		rainy = true
+	} else {
+		rainy = false
+	}
+	
+	if (rainy) {
+		postUpdate(RainyItem, ON)
+	} else {
+		postUpdate(RainyItem, OFF)
+	}
+end
+

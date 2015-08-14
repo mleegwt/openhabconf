@@ -1,0 +1,26 @@
+Group	gC	(All)	
+Group	Outdoor	(All)	
+Group	Weather	(All)	
+Group	Status	(All)	
+String	UnknownDevices	"Unknown Devices in Range: [%s]"	{ bluetooth="?" }
+Number	NoOfPairedDevices	"Paired Devices in Range: [%d]"	{ bluetooth="!" }
+
+Number	ZwaveStatsSOF	"Number Start of Frames[%s]"	(gZwaveStats)		{ zwave="1:command=info,item=sof" }
+Number	ZwaveStatsACK	"Number of Acknowledgments [%s]"	(gZwaveStats)		{ zwave="1:command=info,item=ack" }
+Number	ZwaveStatsCAN	"Number of CAN [%s]"	(gZwaveStats)		{ zwave="1:command=info,item=can" }
+Number	ZwaveStatsNAK	"Number of NAK [%s]"	(gZwaveStats)		{ zwave="1:command=info,item=nak" }
+Number	ZwaveStatsOOF	"Number of OOF [%s]"	(gZwaveStats)		{ zwave="1:command=info,item=oof" }
+Number	ZwaveStatsTimeout	"Number of Time-outs [%s]"	(gZwaveStats)		{ zwave="1:command=info,item=time_out" }
+String	ZwaveNode01HomeID	"Home ID [%s]"	(gZwaveNode01)		{ zwave="1:command=info,item=home_id" }
+Number	ZwaveNode01NetworkID	"Node ID [%s]"	(gZwaveNode01)		{ zwave="1:command=info,item=node_id" }
+Rollershutter	ZonneschermWK	"Zonnescherm WK"	{ zwave="6:command=switch_multilevel" }
+Rollershutter Fake "Fake"
+Switch ZonneschermWKForbidden "Zonnescherm WK forbidden" <forbidden>
+Switch ZonneschermWKClosedReasons "Zonnescherm WK closed reasons: [%s]" <forbidden>
+Rollershutter	ZonneschermSTK	"Zonnescherm STK"	{ zwave="7:command=switch_multilevel" }
+//Rollershutter	ZonneschermZ	"Zonnescherm Z"	{ zwave="5:command=switch_multilevel" }
+Switch	LampSlaapkamer	"Lamp slaapkamer"	{ zwave="5:command=switch_binary" }
+Dimmer	LampKeuken	"Lamp keuken"	{ zwave="3:command=switch_multilevel" }
+//Switch	LampTerras	"Lamp terras"	{ zwave="9:2:command=switch_binary" }
+Number	Schakelaar_Battery	"Schakelaar lamp slaapkamer [%d %%]"	<energy>	{ zwave="4:command=battery" }
+
