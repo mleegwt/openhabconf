@@ -11,7 +11,7 @@ rule "Close rollershutter WK"
 when
 	Item ZonneschermWKClosedReasons received update ON
 then
-	sendCommand(Fake, OFF)
+	sendCommand(ZonneschermWK, OFF)
 end
 
 

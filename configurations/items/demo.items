@@ -14,7 +14,6 @@ Number	ZwaveStatsTimeout	"Number of Time-outs [%s]"	(gZwaveStats)		{ zwave="1:co
 String	ZwaveNode01HomeID	"Home ID [%s]"	(gZwaveNode01)		{ zwave="1:command=info,item=home_id" }
 Number	ZwaveNode01NetworkID	"Node ID [%s]"	(gZwaveNode01)		{ zwave="1:command=info,item=node_id" }
 Rollershutter	ZonneschermWK	"Zonnescherm WK"	{ zwave="6:command=switch_multilevel" }
-Rollershutter Fake "Fake"
 Switch ZonneschermWKForbidden "Zonnescherm WK forbidden" <forbidden>
 Switch ZonneschermWKClosedReasons "Zonnescherm WK closed reasons: [%s]" <forbidden>
 Rollershutter	ZonneschermSTK	"Zonnescherm STK"	{ zwave="7:command=switch_multilevel" }

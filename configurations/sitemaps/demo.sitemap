@@ -2,7 +2,6 @@ sitemap demo label="Main Menu"
 {
 	Frame label="Zonwering" {
 		Slider item=ZonneschermWK label="Zonnescherm woonkamer" icon="rollershutter"
-		Slider item=Fake label="Fake" icon="rollershutter"
 		Switch item=ZonneschermWKForbidden
 		Text item=ZonneschermWKClosedReasons
 //		Slider item=ZonneschermSLK label="Zonnescherm slaapkamer" icon="rollershutter"
