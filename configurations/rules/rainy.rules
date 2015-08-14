@@ -5,7 +5,7 @@ when
 	Item RainRate received update or 
 	Item BRRainMax received update
 then
-	if (RainRate.state > 0 || BRRainMax.state > 0 || RainBattery.state == null || RainBattery.state == ON) {
+	if (RainRate.state > 0 || BRRainMax.state >= 0.01 || RainBattery.state == null || RainBattery.state == ON) {
 		rainy = true
 	} else {
 		rainy = false
