@@ -1,0 +1,2 @@
+SUBSYSTEM=="usb", GROUP="openhab", MODE="0660"
+
