@@ -2,14 +2,14 @@ sitemap demo label="Main Menu"
 {
 	Frame label="Zonwering" {
 		Slider item=ZonneschermWK label="Zonnescherm woonkamer" icon="rollershutter"
-		Switch item=ZonneschermWKForbidden
+		Switch item=Glazenwasser
 		Text item=ZonneschermWKClosedReasons
 //		Slider item=ZonneschermSLK label="Zonnescherm slaapkamer" icon="rollershutter"
 //		Slider item=ZonneschermSTK label="Zonnescherm studeerkamer" icon="rollershutter"
 	}	
 	Frame label="Lampen" {
 		Switch item=LampSlaapkamer label="Lamp slaapkamer" icon="light"	
-//		Switch item=LampTerras label="Lamp terras" icon="terrace"
+		Switch item=LampTerras label="Lamp terras" icon="terrace"
 		Switch item=LampBuitenSchuur icon="terrace"
 		Slider item=LampKeuken label="Lamp keuken" icon="hue"
 	}	

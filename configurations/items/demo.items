@@ -20,7 +20,8 @@ Rollershutter	ZonneschermSTK	"Zonnescherm STK"	{ zwave="7:command=switch_multile
 //Rollershutter	ZonneschermZ	"Zonnescherm Z"	{ zwave="5:command=switch_multilevel" }
 Switch	LampSlaapkamer	"Lamp slaapkamer"	{ zwave="5:command=switch_binary" }
 Dimmer	LampKeuken	"Lamp keuken"	{ zwave="3:command=switch_multilevel" }
-//Switch	LampTerras	"Lamp terras"	{ zwave="9:2:command=switch_binary" }
+Switch	LampTerras	"Lamp terras"	{ zwave="8:2:command=switch_binary" }
+Switch	Glazenwasser	"Glazenwasser"	{ zwave="8:1:command=switch_binary" }
 Number	Schakelaar_Battery	"Schakelaar lamp slaapkamer [%d %%]"	<energy>	{ zwave="4:command=battery" }
 
 Switch LampBuitenSchuur "Buitenlamp schuur"	{ zwave="2:1:command=switch_binary" }

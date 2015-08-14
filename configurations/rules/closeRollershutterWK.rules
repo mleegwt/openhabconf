@@ -19,9 +19,9 @@ rule "Determine closed reasons"
 when
 	Item RainyItem received update or
 	Item WindyItem received update or
-	Item ZonneschermWKForbidden received update
+	Item Glazenwasser received update
 then
-	if (RainyItem.state == ON || WindyItem.state == ON || ZonneschermWKForbidden.state == ON) {
+	if (RainyItem.state == ON || WindyItem.state == ON || Glazenwasser.state == ON) {
 		closedReasons = true
 	} else {
 		closedReasons = false
